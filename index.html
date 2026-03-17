@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Serenity — Official Page</title>
+  <meta name="description" content="Exclusive wellness moments, premium experiences and complete harmony." />
+  <style>
+    :root {
+      --bg: #121418;
+      --bg-soft: #1a1e25;
+      --card: #1b2027;
+      --line: rgba(255,255,255,0.08);
+      --text: #f2f4f7;
+      --muted: #b7bec9;
+      --muted-2: #98a1ae;
+      --accent: #ff7e5f;
+      --accent-2: #ff9a76;
+      --accent-shadow: rgba(255,126,95,0.28);
+      --ok: #49d17a;
+      --max: 440px;
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top center, rgba(255,154,118,0.10), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(255,126,95,0.08), transparent 28%),
+        linear-gradient(180deg, #101216 0%, #151920 100%);
+      display: flex;
+      justify-content: center;
+      padding: 14px 10px 22px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+      max-width: var(--max);
+    }
+
+    .shell {
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      box-shadow: 0 18px 60px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.04);
+      backdrop-filter: blur(6px);
+      padding: 12px;
+    }
+
+    .card,
+    .footer-card {
+      background: linear-gradient(180deg, var(--card) 0%, var(--bg-soft) 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+
+    .footer-shell {
+      margin-top: 12px;
+    }
+
+    .head {
+      padding: 14px 16px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+      color: #d9dde5;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--ok);
+      box-shadow: 0 0 0 6px rgba(73,209,122,0.14);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: linear-gradient(180deg, #2a3039, #1f242c);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      flex: 0 0 auto;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-fallback {
+      display: none;
+      font-weight: 800;
+      color: #d2d8e0;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+
+    .name {
+      margin: 0;
+      font-size: clamp(1.2rem, 5.8vw, 1.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      text-align: center;
+    }
+
+    .hero-link {
+      display: block;
+      margin: 0 14px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #252b34 0%, #1f242c 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    .hero {
+      width: 100%;
+      aspect-ratio: 5 / 4;
+      position: relative;
+      background:
+        radial-gradient(circle at 70% 18%, rgba(255,154,118,0.16), transparent 18%),
+        radial-gradient(circle at 25% 26%, rgba(255,126,95,0.10), transparent 16%),
+        linear-gradient(180deg, #2a3039 0%, #222831 100%);
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-placeholder {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      color: #c7ced8;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.5;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)),
+        linear-gradient(135deg, rgba(255,154,118,0.10), rgba(255,126,95,0.06));
+    }
+
+    .content {
+      padding: 16px 18px 10px;
+      text-align: center;
+    }
+
+    .title {
+      margin: 0;
+      font-size: clamp(1.55rem, 6.8vw, 1.9rem);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+
+    .cta-wrap {
+      padding: 14px 18px 8px;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 58px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, var(--accent-2) 0%, var(--accent) 100%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      box-shadow: 0 12px 30px var(--accent-shadow);
+      transition: transform .14s ease, box-shadow .14s ease, opacity .14s ease;
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 15px 36px rgba(255,126,95,0.34);
+    }
+
+    .cta:active {
+      transform: translateY(1px);
+      opacity: 0.98;
+    }
+
+    .after-text {
+      padding: 8px 18px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.97rem;
+      line-height: 1.52;
+      max-width: 32ch;
+      margin: 0 auto;
+    }
+
+    .footer-card {
+      padding: 18px 18px 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 12px;
+      margin-bottom: 14px;
+    }
+
+    .footer-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: background .15s ease, transform .15s ease, border-color .15s ease;
+    }
+
+    .footer-links a:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.12);
+      transform: translateY(-1px);
+    }
+
+    .footer-note {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .copyright {
+      margin: 0;
+      color: var(--muted-2);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 12px 30px var(--accent-shadow);
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 16px 38px rgba(255,126,95,0.38);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cta {
+        animation: none;
+      }
+    }
+
+    @media (min-width: 560px) {
+      body { padding: 24px 16px 32px; }
+      .shell { padding: 16px; }
+      .head { padding: 16px 18px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="shell">
+      <section class="card">
+        <header class="head">
+          <div class="pill"><span class="dot"></span>Official page</div>
+          <div class="brand-row">
+            <a class="logo" href="./home.html" aria-label="Open next page">
+              <img src="./logo.png" alt="Brand logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+              <span class="logo-fallback">LT</span>
+            </a>
+            <h1 class="name">Luxe Serenity</h1>
+          </div>
+        </header>
+
+        <a class="hero-link" href="./home.html" aria-label="Open next page">
+          <div class="hero">
+            <img src="./hero.webp" alt="Featured image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="hero-placeholder">Featured image</div>
+          </div>
+        </a>
+
+        <div class="content">
+          <h2 class="title">Welcome to Deep Serenity</h2>
+        </div>
+
+        <div class="cta-wrap">
+          <a class="cta" href="./home.html" aria-label="Open next page">
+            Discover the Experience ✨
+          </a>
+        </div>
+
+        <p class="after-text">Exclusive wellness moments, premium experiences and complete harmony</p>
+      </section>
+
+      <div class="footer-shell">
+        <section class="footer-card">
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="./contact.html">Contact</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./terms.html">Terms of Use</a>
+          </nav>
+          <p class="footer-note">For official updates and featured content, use the links above.</p>
+          <p class="copyright">© 2026 Luxe Serenity. All rights reserved.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

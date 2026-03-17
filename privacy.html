@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Serenity — Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Luxe Serenity." />
+  <style>
+    :root {
+      --bg: #121418;
+      --card: #1b2027;
+      --card-2: #202631;
+      --line: rgba(255,255,255,0.08);
+      --text: #f2f4f7;
+      --muted: #b8c0cb;
+      --soft: #9099a6;
+      --accent: #ff7e5f;
+      --accent-2: #ff9a76;
+      --accent-shadow: rgba(255,126,95,0.28);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --max: 820px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top center, rgba(255,154,118,0.10), transparent 24%),
+        linear-gradient(180deg, #101216 0%, #151920 100%);
+      padding: 18px 14px 28px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      border-radius: 32px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      box-shadow: 0 18px 60px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 24px 18px 18px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #2a3039, #1f242c);
+      display: grid;
+      place-items: center;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-fallback {
+      display: none;
+      font-weight: 800;
+      color: #d2d8e0;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.95rem, 7vw, 2.5rem);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+    }
+
+    .lead {
+      margin: 0 auto 18px;
+      max-width: 38ch;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+      margin: 0 auto 22px;
+      max-width: 420px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      border-radius: 18px;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform .14s ease, box-shadow .14s ease, opacity .14s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, var(--accent-2) 0%, var(--accent) 100%);
+      color: #fff;
+      box-shadow: 0 12px 30px var(--accent-shadow);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(1px); opacity: 0.98; }
+
+    .content {
+      display: grid;
+      gap: 14px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .panel h2 {
+      margin: 0 0 10px;
+      font-size: 1.02rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .meta {
+      margin-top: 16px;
+      text-align: center;
+      color: var(--soft);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <header class="header">
+        <div class="logo">
+          <img src="./logo.png" alt="Luxe Serenity logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="logo-fallback">LT</span>
+        </div>
+        <h1>Privacy Policy</h1>
+        <p class="lead">This page outlines general privacy principles relating to access, browsing, and use of official Luxe Serenity web pages.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.patreon.com/cw/MASSAGE_X" target="_blank" rel="noopener noreferrer">Join my private wellness space</a>
+          <a class="btn btn-secondary" href="./index.html">BACK TO HOME</a>
+        </div>
+      </header>
+
+      <div class="content">
+        <article class="panel">
+          <h2>General Information</h2>
+          <p>Luxe Serenity values a simple and respectful browsing experience. This website is intended to provide access to official pages, general information, and current content. Basic technical information may be processed by the browser, hosting provider, or connected services as part of standard website delivery and functionality.</p>
+        </article>
+
+        <article class="panel">
+          <h2>Use of Third-Party Platforms</h2>
+          <p>Some links on this website may lead to third-party platforms or external services. When users visit those platforms, their interaction is governed by the terms, privacy practices, and policies of the relevant provider. Users are encouraged to review the privacy information of any third-party destination they access.</p>
+        </article>
+
+        <article class="panel">
+          <h2>Cookies & Technical Data</h2>
+          <p>Standard website technologies such as cookies, device information, browser settings, performance logs, or anonymous analytics may be used by hosting, content delivery, or external platforms to ensure functionality, security, compatibility, and a better user experience. Such processes are generally handled in accordance with the applicable service environment.</p>
+        </article>
+
+        <article class="panel">
+          <h2>Data Handling Principles</h2>
+          <p>Luxe Serenity aims to keep website access straightforward and limited to what is reasonably necessary for availability, stability, and navigation. No guarantees are made regarding the policies of external services, and users remain responsible for reviewing the settings, permissions, and preferences connected to their own platform use.</p>
+        </article>
+      </div>
+
+      <div class="meta">Effective date: 2026</div>
+    </section>
+  </main>
+</body>
+</html>
